@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCadastroEventos.Views.CadastrarEvento"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource OffBlack}">
+
+    <VerticalStackLayout
+        VerticalOptions="CenterAndExpand"
+        Padding="12"
+        Spacing="10"
+        Margin="10">
+
+        <Label 
+            Text="Cadastre seu Evento"
+            FontFamily="Kalam" 
+            FontSize="38"
+            TextColor="{StaticResource Primary}"
+            HorizontalOptions="Center"/>
+
+        <Entry
+            Placeholder="Nome do Evento"
+            PlaceholderColor="{StaticResource Secondary}"
+            x:Name="txt_nomeEvento"/>   
+
+        <HorizontalStackLayout>
+
+            <Label
+                Text="Data de Início:"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+            <DatePicker
+                x:Name="dtpck_inicio"
+                Format="dd/MM/yyyy"
+                Scale="0.70"
+                HorizontalOptions="Center"/>
+            
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+
+            <Label
+                Text="Data de Término:"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+            <DatePicker
+                x:Name="dtpck_termino"
+                Format="dd/MM/yyyy"
+                Scale="0.70"
+                HorizontalOptions="Center"/>
+
+        </HorizontalStackLayout>
+
+        <Entry
+            x:Name="txt_NumParticipantes"
+            Placeholder="Número de Participantes"
+            PlaceholderColor="{StaticResource Secondary}"
+            Keyboard="Numeric"/>
+
+
+
+        <Entry
+            x:Name="txt_localEvento"
+            Placeholder="Local do Evento"
+            PlaceholderColor="{StaticResource Secondary}"/>
+
+        <Entry 
+            x:Name="txt_custoParticipante"
+            Placeholder="Digite o custo por participante"
+            PlaceholderColor="{StaticResource Secondary}"
+            Keyboard="Numeric"/>
+
+        <Button
+            Text="Avançar"
+            Clicked="Button_Clicked"
+            TextColor="{StaticResource Primary}"
+            CornerRadius="8"
+            HeightRequest="1"
+            FontSize="Micro"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>

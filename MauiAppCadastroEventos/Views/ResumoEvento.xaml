@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCadastroEventos.Views.ResumoEvento"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource OffBlack}">
+    
+    <VerticalStackLayout
+        VerticalOptions="CenterAndExpand"
+        Margin="10"
+        Spacing="10"
+        Padding="12">
+        
+        <Label 
+            Text="Resumo do Evento"
+            FontFamily="Kalam"
+            FontSize="38"
+            TextColor="{StaticResource Primary}"
+            HorizontalOptions="Center" />
+
+        <HorizontalStackLayout
+            Spacing="15">
+
+            <Label
+                Text="Nome do Evento:"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+            <Label
+                Text="{Binding NomeEvento}"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+            
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout
+            Spacing="15">
+
+            <Label
+                Text="Data de Início:"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+            <Label
+                Text="{Binding DataInicio, StringFormat='{} {0:dd/MM/yyyy}'}"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout
+            Spacing="15">
+
+            <Label
+                Text="Data de Término:"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+            <Label
+                Text="{Binding DataTermino, StringFormat='{} {0:dd/MM/yyyy}'}"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout
+            Spacing="15">
+
+            <Label
+                Text="Duração do Evento:"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+            <Label
+                Text="{Binding TimeSpam}"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout
+            Spacing="15">
+
+            <Label
+                Text="Número de Participantes:"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+            <Label
+                Text="{Binding NumParticipantes}"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout 
+            Spacing="15">
+
+            <Label
+                Text="Local do Evento:"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+            <Label
+                Text="{Binding LocalEvento}"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout 
+            Spacing="15">
+
+            <Label
+                Text="Custo por Participante:"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+            <Label
+                Text="{Binding CustoParticipante, StringFormat='{} {0:c}'}"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout
+            Spacing="15">
+
+            <Label
+                Text="Custo Total:"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+            <Label
+                Text="{Binding CustoTotal, StringFormat='{} {0:c}'}"
+                TextColor="{StaticResource Secondary}"
+                FontSize="Micro"
+                VerticalOptions="Center"/>
+
+        </HorizontalStackLayout>
+        
+    </VerticalStackLayout>
+    
+</ContentPage>
